@@ -1,0 +1,143 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(8, 8, 12, 0.82);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-container {
+  height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.nav-logo span {
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.nav-links a {
+  color: var(--text-secondary);
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+.nav-cta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  font-size: 13px;
+  transition: 0.3s ease;
+}
+
+.nav-cta:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.mobile-menu {
+  display: none;
+  background: transparent;
+  color: white;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    height: 72px;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    padding: 25px;
+    background: #111116;
+    border-bottom: 1px solid var(--border);
+    display: none;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-cta {
+    margin-left: auto;
+    margin-right: 18px;
+    padding: 9px 13px;
+  }
+
+  .mobile-menu {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .nav-logo {
+    font-size: 19px;
+  }
+
+  .nav-cta {
+    font-size: 12px;
+    margin-right: 12px;
+  }
+}
+
+.nav-resume {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  white-space: nowrap;
+  flex-shrink: 0;
+
+  padding: 10px 17px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50px;
+
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.nav-resume:hover {
+  border-color: #8b5cf6;
+  color: #a78bfa;
+  background: rgba(139, 92, 246, 0.08);
+}
+
+.nav-resume svg {
+  flex-shrink: 0;
+}
