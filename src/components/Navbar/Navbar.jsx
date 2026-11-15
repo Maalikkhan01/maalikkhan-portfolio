@@ -5,9 +5,11 @@ import "./Navbar.css";
 const navLinks = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
   { name: "Education", href: "#education" },
+  { name: "Skills", href: "#skills" },
+  { name: "Experience", href: "#experience" },
+  { name: "Projects", href: "#projects" },
+  { name: "Certificates", href: "#certificates" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -23,7 +25,7 @@ function Navbar() {
           MaalikKhan<span>.dev</span>
         </a>
 
-        <div className={`nav-links ${menuOpen ? "active" : ""}`}>
+        <div id="nav-menu" className={`nav-links ${menuOpen ? "active" : ""}`}>
           {navLinks.map((link) => (
             <a key={link.name} href={link.href} onClick={closeMenu}>
               {link.name}
@@ -45,12 +47,14 @@ function Navbar() {
         </a>
 
         <button
+          type="button"
           className="mobile-menu"
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle navigation"
+          aria-label={menuOpen ? "Close navigation" : "Open navigation"}
           aria-expanded={menuOpen}
+          aria-controls="nav-menu"
         >
-          {menuOpen ? <X /> : <Menu />}
+          {menuOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </nav>
     </header>

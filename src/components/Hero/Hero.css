@@ -1,4 +1,3 @@
-
 .hero {
   min-height: 100vh;
   padding-top: 150px;
@@ -8,7 +7,7 @@
   align-items: center;
   gap: 55px;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .hero-content {
@@ -25,7 +24,7 @@
   padding: 10px 15px;
   border: 1px solid var(--border);
   border-radius: 50px;
-  background: rgba(255,255,255,0.03);
+  background: rgba(255, 255, 255, 0.03);
   color: #c4b5fd;
   font-size: 12px;
   margin-bottom: 36px;
@@ -49,7 +48,7 @@
 }
 
 .hero h1 {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-size: clamp(55px, 7vw, 88px);
   line-height: 1.03;
   letter-spacing: -5px;
@@ -57,7 +56,7 @@
 }
 
 .hero h2 {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-size: clamp(19px, 2.4vw, 27px);
   margin-top: 25px;
   color: #c4b5fd;
@@ -95,12 +94,12 @@
 .primary-btn {
   background: linear-gradient(110deg, #8b5cf6, #6366f1);
   color: white;
-  box-shadow: 0 8px 30px rgba(139,92,246,0.22);
+  box-shadow: 0 8px 30px rgba(139, 92, 246, 0.22);
 }
 
 .primary-btn:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 35px rgba(139,92,246,0.4);
+  box-shadow: 0 12px 35px rgba(139, 92, 246, 0.4);
 }
 
 .secondary-btn {
@@ -110,7 +109,7 @@
 
 .secondary-btn:hover {
   border-color: var(--accent);
-  background: rgba(139,92,246,0.08);
+  background: rgba(139, 92, 246, 0.08);
 }
 
 .hero-socials {
@@ -123,17 +122,24 @@
 
 .hero-socials > span:first-child {
   color: var(--text-secondary);
-  font-size: 10px;
-  letter-spacing: 2px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
 }
 
 .hero-socials a {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: var(--text-secondary);
+  border-radius: 10px;
   transition: 0.3s;
 }
 
 .hero-socials a:hover {
   color: var(--accent);
+  background: rgba(139, 92, 246, 0.1);
   transform: translateY(-3px);
 }
 
@@ -165,7 +171,7 @@
   height: 370px;
   background: radial-gradient(
     circle,
-    rgba(139,92,246,0.27),
+    rgba(139, 92, 246, 0.27),
     transparent 70%
   );
   filter: blur(35px);
@@ -177,11 +183,11 @@
   width: min(370px, 85%);
   height: 440px;
   padding: 15px;
-  border: 1px solid rgba(167,139,250,0.3);
+  border: 1px solid rgba(167, 139, 250, 0.3);
   border-radius: 25px;
   background: linear-gradient(145deg, #22202d, #111116);
   transform: rotate(2deg);
-  box-shadow: 0 30px 100px rgba(0,0,0,0.45);
+  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.45);
 }
 
 .image-placeholder {
@@ -196,15 +202,15 @@
 }
 
 .image-placeholder span {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-size: 95px;
   font-weight: 700;
   color: #c4b5fd;
 }
 
 .image-placeholder p {
-  font-size: 10px;
-  letter-spacing: 3px;
+  font-size: 12px;
+  letter-spacing: 2px;
   color: var(--text-secondary);
 }
 
@@ -217,14 +223,14 @@
 }
 
 .image-card-bottom span {
-  font-size: 9px;
-  letter-spacing: 2px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
   color: var(--text-secondary);
 }
 
 .image-card-bottom h3 {
   margin-top: 7px;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-size: 17px;
   color: white;
 }
@@ -238,9 +244,9 @@
   padding: 14px 18px;
   border: 1px solid var(--border);
   border-radius: 14px;
-  background: rgba(25,24,34,0.93);
+  background: rgba(25, 24, 34, 0.93);
   backdrop-filter: blur(15px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
 
 .floating-card > div {
@@ -250,12 +256,12 @@
 }
 
 .floating-card strong {
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .floating-card span {
   color: var(--text-secondary);
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .floating-code {
@@ -271,13 +277,17 @@
 
 .scroll-indicator {
   position: absolute;
-  bottom: -45px;
-  display: flex;
+  bottom: 0;
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
-  font-size: 10px;
-  letter-spacing: 2px;
+  min-height: 44px;
+  padding: 8px 12px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
   color: var(--text-secondary);
+  border-radius: 8px;
 }
 
 @media (max-width: 900px) {
@@ -317,6 +327,20 @@
   .hero {
     padding-top: 125px;
     padding-bottom: 55px;
+  }
+
+  .hero-socials a {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .scroll-indicator {
+    bottom: 0;
+    font-size: 11px;
+  }
+
+  .hero {
+    overflow: visible;
   }
 
   .hero h1 {

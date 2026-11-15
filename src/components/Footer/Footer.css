@@ -1,12 +1,7 @@
-
 .footer {
   position: relative;
   padding: 75px 0 25px;
-  background: linear-gradient(
-    180deg,
-    #0a0a0f,
-    #101019
-  );
+  background: linear-gradient(180deg, #0a0a0f, #101019);
   border-top: 1px solid var(--border);
 }
 
@@ -20,7 +15,7 @@
 .footer-logo {
   display: inline-block;
   color: #f5f5f7;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-size: 25px;
   font-weight: 700;
   text-decoration: none;
@@ -34,7 +29,7 @@
   max-width: 340px;
   margin-top: 18px;
   color: var(--text-secondary);
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.9;
 }
 
@@ -45,8 +40,8 @@
 }
 
 .footer-socials a {
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   display: grid;
   place-items: center;
   color: #c4b5fd;
@@ -66,7 +61,7 @@
 .footer-availability h4 {
   margin-bottom: 22px;
   color: #f5f5f7;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-size: 16px;
 }
 
@@ -78,11 +73,12 @@
 }
 
 .footer-navigation a {
+  min-height: 44px;
   display: inline-flex;
   align-items: center;
   gap: 7px;
   color: var(--text-secondary);
-  font-size: 13px;
+  font-size: 14px;
   text-decoration: none;
   transition: 0.25s ease;
 }
@@ -95,17 +91,18 @@
 .footer-availability > p {
   max-width: 280px;
   color: var(--text-secondary);
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.9;
 }
 
 .footer-contact-link {
+  min-height: 44px;
   display: inline-flex;
   align-items: center;
   gap: 8px;
   margin-top: 20px;
   color: #a78bfa;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   text-decoration: none;
   transition: 0.25s ease;
@@ -127,7 +124,7 @@
 
 .footer-bottom > p {
   color: var(--text-secondary);
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .footer-made {
@@ -142,8 +139,8 @@
 }
 
 .back-to-top {
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   display: grid;
   place-items: center;
   color: #c4b5fd;
@@ -158,6 +155,13 @@
   color: white;
   background: #7955e9;
   transform: translateY(-4px);
+}
+
+.footer a:focus-visible,
+.back-to-top:focus-visible {
+  outline: 2px solid #a78bfa;
+  outline-offset: 4px;
+  border-radius: 6px;
 }
 
 @media (max-width: 800px) {
@@ -190,11 +194,11 @@
   }
 
   .footer-bottom > p {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .back-to-top {
-    width: 38px;
-    height: 38px;
+    width: 40px;
+    height: 40px;
   }
 }

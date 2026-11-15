@@ -1,0 +1,124 @@
+.certificates-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.certificate-card {
+  padding: 25px;
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: linear-gradient(
+    145deg,
+    rgba(28, 27, 38, 0.95),
+    rgba(16, 16, 22, 0.95)
+  );
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  transition: 0.3s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(139, 92, 246, 0.45);
+}
+
+.certificate-card-top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.certificate-icon {
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  color: #a78bfa;
+  background: rgba(139, 92, 246, 0.12);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 12px;
+}
+
+.certificate-year {
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.certificate-category {
+  color: #c4b5fd;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.certificate-card h3 {
+  margin-top: 10px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.certificate-card > p {
+  margin-top: 8px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.certificate-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 44px;
+  margin-top: auto;
+  padding-top: 20px;
+  color: #a78bfa;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.certificate-footer:not(.unavailable):hover {
+  color: #c4b5fd;
+}
+
+.certificate-footer.unavailable {
+  color: #777782;
+  cursor: default;
+}
+
+@media (max-width: 900px) {
+  .certificates-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 550px) {
+  .certificates-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .certificate-card {
+    min-height: 210px;
+    padding: 22px;
+  }
+
+  .certificate-card h3 {
+    font-size: 17px;
+  }
+
+  .certificate-card > p {
+    font-size: 14px;
+  }
+}

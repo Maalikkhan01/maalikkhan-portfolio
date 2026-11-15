@@ -1,5 +1,4 @@
-
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import {
   ArrowUpRight,
   ExternalLink,
@@ -8,94 +7,76 @@ import {
   BrainCircuit,
   MessageCircle,
   Repeat2,
-} from 'lucide-react';
+} from "lucide-react";
 
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub } from "react-icons/fa";
 
-import './Projects.css';
+import "./Projects.css";
 
 const projects = [
   {
-    id: 'ame',
-    number: '01',
-    name: 'AME Billing ERP',
-    category: 'BUSINESS MANAGEMENT SYSTEM',
+    id: "ame",
+    number: "01",
+    name: "AME Billing ERP",
+    category: "RETAIL BUSINESS MANAGEMENT SYSTEM",
     description:
-      'A retail billing and business management application designed to simplify daily shop operations through billing, customer management, inventory and reporting.',
+      "A full-stack billing and business management system built for small retail shops. It helps manage daily billing operations, customers, inventory, payments and business reports through a centralized application.",
     features: [
-      'Billing & Invoicing',
-      'Customer Management',
-      'Inventory Management',
-      'Sales & Due Reports',
+      "Billing & Invoice Generation",
+      "Customer & Ledger Management",
+      "Inventory Management",
+      "Sales & Due Reports",
+      "Payment & Return Management",
     ],
-    technologies: ['React', 'Node.js', 'Express.js', 'MongoDB'],
+    technologies: ["React", "Node.js", "Express.js", "MongoDB"],
     icon: ShoppingCart,
     featured: true,
-    status: 'Featured Project',
-    theme: 'ame',
-    github: 'https://github.com/Maalikkhan01/ame-billing-erp',
-demo: '',
+    status: "Featured Project",
+    theme: "ame",
+    github: "https://github.com/Maalikkhan01/ame-billing-erp",
+    demo: "",
   },
   {
-    id: 'skillmirror',
-    number: '02',
-    name: 'SkillMirror',
-    category: 'AI CAREER PLATFORM',
+    id: "twiller",
+    number: "03",
+    name: "Twiller",
+    category: "SOCIAL MEDIA APPLICATION",
     description:
-      'An AI-powered career reality checker concept designed to help students evaluate their skills, identify gaps and understand career readiness.',
+      "A Twitter-inspired social media application developed to explore modern web technologies, authentication, backend integration and real-time communication.",
     features: [
-      'Career Readiness Concept',
-      'Skill Gap Analysis',
-      'AI-Assisted Insights',
+      "Social Media Interface",
+      "Firebase Admin Integration",
+      "Real-time Notifications",
     ],
-    technologies: ['Next.js', 'Express.js', 'Prisma', 'PostgreSQL'],
-    icon: BrainCircuit,
-    featured: false,
-    status: 'Product Development',
-    theme: 'skillmirror',
-    github: '',
-    demo: '',
-  },
-  {
-    id: 'twiller',
-    number: '03',
-    name: 'Twiller',
-    category: 'SOCIAL MEDIA APPLICATION',
-    description:
-      'A Twitter-inspired social media application exploring modern web development, authentication and real-time notification functionality.',
-    features: [
-      'Social Media Interface',
-      'Firebase Admin Integration',
-      'Real-time Notifications',
-    ],
-    technologies: ['Next.js', 'Firebase', 'Socket.io'],
+    technologies: ["Next.js", "Firebase", "Socket.io"],
     icon: MessageCircle,
     featured: false,
-    status: 'Development Project',
-    theme: 'twiller',
-    github: 'https://github.com/Maalikkhan01/Twiller',
-demo: '',
+    status: "Development Project",
+    theme: "twiller",
+    github: "https://github.com/Maalikkhan01/Twiller",
+    demo: "",
   },
   {
-    id: 'skillxchange',
-    number: '04',
-    name: 'SkillXchange',
-    category: 'COMMUNITY PLATFORM',
+    id: "skillxchange",
+    number: "04",
+    name: "SkillXchange",
+    category: "COMMUNITY PLATFORM",
     description:
-      'A Django-based local skill barter platform concept where people can connect and exchange skills with one another.',
+      "A Django-based skill exchange platform concept that allows people to connect with others, share their abilities and exchange knowledge.",
     features: [
-      'User Profiles',
-      'Skill Management',
-      'Matching System',
-      'Notifications',
+      "User Profiles",
+      "Skill Management",
+      "Skill Matching",
+      "Community Interaction",
     ],
-    technologies: ['Python', 'Django', 'SQLite'],
+    technologies: ["Python", "Django", "SQLite"],
     icon: Repeat2,
     featured: false,
-    status: 'Development Project',
-    theme: 'skillxchange',
-    github: 'https://github.com/Maalikkhan01/SkillXchange-Local-Telent-Barter-Hub-',
-demo: '',
+    status: "Development Project",
+    theme: "skillxchange",
+    github:
+      "https://github.com/Maalikkhan01/SkillXchange-Local-Telent-Barter-Hub-",
+    demo: "",
   },
 ];
 
@@ -122,9 +103,7 @@ function ProjectVisual({ project }) {
             <Icon size={34} />
           </div>
 
-          <span className="preview-label">
-            {project.category}
-          </span>
+          <span className="preview-label">{project.category}</span>
 
           <h3>{project.name}</h3>
 
@@ -153,7 +132,7 @@ function ProjectVisual({ project }) {
 function ProjectCard({ project, index }) {
   return (
     <motion.article
-      className={`project-card ${project.featured ? 'featured-project' : ''}`}
+      className={`project-card ${project.featured ? "featured-project" : ""}`}
       initial={{ opacity: 0, y: 35 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -162,7 +141,6 @@ function ProjectCard({ project, index }) {
       <ProjectVisual project={project} />
 
       <div className="project-content">
-
         <div className="project-meta">
           <span>{project.number} / PROJECT</span>
           <span>{project.status}</span>
@@ -170,9 +148,7 @@ function ProjectCard({ project, index }) {
 
         <h3>{project.name}</h3>
 
-        <p className="project-description">
-          {project.description}
-        </p>
+        <p className="project-description">{project.description}</p>
 
         <div className="project-features">
           {project.features.map((feature) => (
@@ -205,7 +181,7 @@ function ProjectCard({ project, index }) {
             </span>
           )}
 
-          {project.demo ? (
+          {project.demo && (
             <a
               href={project.demo}
               target="_blank"
@@ -214,13 +190,8 @@ function ProjectCard({ project, index }) {
             >
               Live Demo <ExternalLink size={15} />
             </a>
-          ) : (
-            <span className="project-demo unavailable">
-              Demo pending
-            </span>
           )}
         </div>
-
       </div>
     </motion.article>
   );
@@ -230,42 +201,30 @@ function Projects() {
   return (
     <section className="projects-section section-padding" id="projects">
       <div className="container">
-
         <motion.div
           className="section-heading"
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <span className="section-eyebrow">
-            SELECTED WORK
-          </span>
+          <span className="section-eyebrow">SELECTED WORK</span>
 
           <h2>
             Featured <span className="gradient-text">Projects.</span>
           </h2>
 
-          <p>
-            A collection of applications and ideas I've worked on.
-          </p>
+          <p>A collection of applications and ideas I've worked on.</p>
         </motion.div>
 
         <div className="projects-grid">
           {projects.map((project, index) => (
-            <ProjectCard
-              key={project.id}
-              project={project}
-              index={index}
-            />
+            <ProjectCard key={project.id} project={project} index={index} />
           ))}
         </div>
 
         <div className="projects-footer">
-          <span>
-            More projects and experiments coming soon.
-          </span>
+          <span>More projects and experiments coming soon.</span>
         </div>
-
       </div>
     </section>
   );

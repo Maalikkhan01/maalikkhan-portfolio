@@ -45,7 +45,7 @@ function Footer() {
                 rel="noopener noreferrer"
                 aria-label="GitHub"
               >
-                <FaGithub size={18} />
+                <FaGithub size={18} aria-hidden="true" />
               </a>
 
               <a
@@ -54,7 +54,7 @@ function Footer() {
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
               >
-                <FaLinkedin size={18} />
+                <FaLinkedin size={18} aria-hidden="true" />
               </a>
             </div>
           </div>
@@ -97,16 +97,17 @@ function Footer() {
           <p>© {currentYear} MaalikKhan.dev. All rights reserved.</p>
 
           <p className="footer-made">
-            Made with <Heart size={14} /> and React
+            Made with React
           </p>
 
           <button
+            type="button"
             className="back-to-top"
             onClick={scrollToTop}
             aria-label="Back to top"
             title="Back to top"
           >
-            <ArrowUp size={18} />
+            <ArrowUp size={18} aria-hidden="true" />
           </button>
         </div>
       </div>

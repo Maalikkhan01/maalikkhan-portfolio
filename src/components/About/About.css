@@ -11,10 +11,40 @@
 .section-eyebrow {
   display: inline-block;
   color: #a78bfa;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 3px;
   margin-bottom: 15px;
+}
+
+.about-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #c4b5fd;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 28px;
+  min-height: 44px;
+  transition: 0.3s ease;
+}
+
+.about-education-card > p {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin-top: 9px;
+}
+
+.about-highlight-card h4 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.about-highlight-card p {
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.6;
 }
 
 .section-heading h2 {
@@ -84,7 +114,7 @@
   align-items: center;
   gap: 9px;
   color: #c4b5fd;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   margin-top: 28px;
   transition: 0.3s ease;
@@ -180,7 +210,16 @@
     padding: 25px 20px;
   }
 
+  .about-main-card > p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
   .about-highlight-card {
     padding: 15px;
+  }
+
+  .about-highlight-card p {
+    font-size: 13px;
   }
 }

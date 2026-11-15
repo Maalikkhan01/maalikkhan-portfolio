@@ -78,7 +78,7 @@
   align-items: center;
   gap: 8px;
   color: #a78bfa;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .education-status {
@@ -89,10 +89,25 @@
   border: 1px solid var(--border);
   border-radius: 30px;
   color: var(--text-secondary);
-  font-size: 10px;
+  font-size: 12px;
 }
 
-.education-status.graduated {
+.education-location {
+  display: block;
+  margin-top: 7px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.education-card > p {
+  margin-top: 18px;
+  max-width: 700px;
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.education-status.current {
   color: #86efac;
   background: rgba(34, 197, 94, 0.08);
   border-color: rgba(34, 197, 94, 0.2);
@@ -157,4 +172,13 @@
   .education-card-top {
     align-items: flex-start;
   }
+
+  .education-card > p {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.education-location {
+  font-size: 13px;
+}
 }

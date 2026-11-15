@@ -76,15 +76,17 @@
   display: block;
   margin-bottom: 6px;
   color: var(--text-secondary);
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 1px;
 }
 
 .contact-detail a,
 .contact-detail p {
   color: var(--text-primary);
-  font-size: 13px;
+  font-size: 14px;
+  line-height: 1.6;
   text-decoration: none;
+  overflow-wrap: anywhere;
 }
 
 .contact-detail a:hover {
@@ -141,14 +143,14 @@
 }
 
 .availability-card strong {
-  font-size: 12px;
+  font-size: 14px;
   color: #86efac;
 }
 
 .availability-card p {
   margin-top: 5px;
   color: var(--text-secondary);
-  font-size: 11px;
+  font-size: 13px;
 }
 
 .contact-form-card h3 {
@@ -159,7 +161,7 @@
   margin-top: 10px;
   margin-bottom: 28px;
   color: var(--text-secondary);
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .form-row {
@@ -177,7 +179,7 @@
 
 .form-group label {
   color: #d4d4dc;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
 }
 
@@ -191,7 +193,7 @@
   border-radius: 10px;
   outline: none;
   font-family: inherit;
-  font-size: 13px;
+  font-size: 14px;
   transition: 0.25s ease;
 }
 
@@ -214,6 +216,7 @@
 .contact-submit {
   width: 100%;
   display: flex;
+  min-height: 48px;
   align-items: center;
   justify-content: center;
   gap: 10px;
@@ -227,6 +230,18 @@
   font-weight: 600;
   cursor: pointer;
   transition: 0.3s ease;
+}
+
+.contact-submit:focus-visible,
+.social-links a:focus-visible,
+.contact-detail a:focus-visible {
+  outline: 2px solid #a78bfa;
+  outline-offset: 4px;
+}
+
+.form-group input:focus-visible,
+.form-group textarea:focus-visible {
+  border-color: #8b5cf6;
 }
 
 .contact-submit:hover {
@@ -254,5 +269,18 @@
   .contact-intro h3,
   .contact-form-card h3 {
     font-size: 22px;
+  }
+
+  .contact-detail {
+    align-items: flex-start;
+  }
+
+  .contact-detail a,
+  .contact-detail p {
+    font-size: 13px;
+  }
+
+  .contact-submit {
+    min-height: 48px;
   }
 }
