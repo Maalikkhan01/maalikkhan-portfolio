@@ -33,12 +33,11 @@ function Navbar() {
           ))}
 
           <a
-            href="/resume/Abdul-Maalik-Khan-Resume.pdf"
-            download="Abdul-Maalik-Khan-Resume.pdf"
-            className="nav-resume"
-            onClick={closeMenu}
+            href="/resume/Abdul_Maalik_Khan.pdf"
+            download="Abdul_Maalik_Khan.pdf"
+            className="secondary-btn"
           >
-            Resume <ArrowUpRight size={15} />
+            Download Resume <ArrowUpRight size={18} />
           </a>
         </div>
 
