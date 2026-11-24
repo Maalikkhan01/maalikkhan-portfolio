@@ -35,9 +35,10 @@ function Navbar() {
           <a
             href="/resume/Abdul_Maalik_Khan.pdf"
             download="Abdul_Maalik_Khan.pdf"
-            className="secondary-btn"
+            className="nav-resume"
+            onClick={closeMenu}
           >
-            Download Resume <ArrowUpRight size={18} />
+            Resume <ArrowUpRight size={15} />
           </a>
         </div>
 
