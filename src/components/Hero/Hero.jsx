@@ -71,8 +71,8 @@ function Hero() {
           </a>
 
           <a
-            href="/resume/Abdul-Maalik-Khan-Resume.pdf"
-            download="Abdul-Maalik-Khan-Resume.pdf"
+            href="/resume/Abdul_Maalik_Khan.pdf"
+            download="Abdul_Maalik_Khan.pdf"
             className="secondary-btn"
           >
             Download Resume <ArrowUpRight size={18} />
