@@ -50,7 +50,7 @@ const projects = [
     ],
     technologies: ["Next.js", "Firebase", "Socket.io"],
     icon: MessageCircle,
-    featured: false,
+    featured: true,
     status: "Development Project",
     theme: "twiller",
     github: "https://github.com/Maalikkhan01/Twiller",
