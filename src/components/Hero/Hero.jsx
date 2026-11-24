@@ -122,8 +122,11 @@ function Hero() {
 
         <div className="hero-image-card">
           <div className="image-placeholder">
-            <span>MK</span>
-            <p>YOUR PHOTO HERE</p>
+            <img
+              src="/images/maalik-profile.png"
+              alt="Abdul Maalik Khan - Full Stack Web Developer"
+              className="hero-profile-image"
+            />
           </div>
 
           <div className="image-card-bottom">

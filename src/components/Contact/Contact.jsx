@@ -1,25 +1,19 @@
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Mail, MapPin, Send, MessageCircle } from "lucide-react";
 
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import {
-  Mail,
-  MapPin,
-  Send,
-  MessageCircle,
-} from 'lucide-react';
-
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import './Contact.css';
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import "./Contact.css";
 
 // Replace this with your actual email later.
-const CONTACT_EMAIL = 'abdulmaalikkhan1010@gmail.com';
+const CONTACT_EMAIL = "abdulmaalikkhan1010@gmail.com";
 
 function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
 
   const handleChange = (e) => {
@@ -34,24 +28,23 @@ function Contact() {
 
     const subject = encodeURIComponent(formData.subject);
     const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`,
     );
 
-    window.location.href =
-      `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
   };
 
   const contactLinks = [
     {
       icon: Mail,
-      title: 'Email',
-      value: 'abdulmaalikkhan1010@gmail.com',
+      title: "Email",
+      value: "abdulmaalikkhan1010@gmail.com",
       link: `mailto:${CONTACT_EMAIL}`,
     },
     {
       icon: MapPin,
-      title: 'Location',
-      value: 'Madhya Pradesh, India',
+      title: "Location",
+      value: "Madhya Pradesh, India",
       link: null,
     },
   ];
@@ -59,29 +52,25 @@ function Contact() {
   return (
     <section className="contact-section section-padding" id="contact">
       <div className="container">
-
         <motion.div
           className="section-heading"
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <span className="section-eyebrow">
-            GET IN TOUCH
-          </span>
+          <span className="section-eyebrow">GET IN TOUCH</span>
 
           <h2>
             Let's Work <span className="gradient-text">Together.</span>
           </h2>
 
           <p>
-            Have an opportunity or an interesting project?
-            I'd love to hear from you.
+            Have an opportunity or an interesting project? I'd love to hear from
+            you.
           </p>
         </motion.div>
 
         <div className="contact-grid">
-
           {/* Contact Information */}
 
           <motion.div
@@ -98,8 +87,7 @@ function Contact() {
               <h3>Let's start a conversation.</h3>
 
               <p>
-                I'm currently open to internships,
-                entry-level opportunities and
+                I'm currently open to internships, entry-level opportunities and
                 collaborative development projects.
               </p>
             </div>
@@ -118,9 +106,7 @@ function Contact() {
                       <span>{item.title}</span>
 
                       {item.link ? (
-                        <a href={item.link}>
-                          {item.value}
-                        </a>
+                        <a href={item.link}>{item.value}</a>
                       ) : (
                         <p>{item.value}</p>
                       )}
@@ -178,7 +164,6 @@ function Contact() {
             </p>
 
             <form onSubmit={handleSubmit}>
-
               <div className="form-row">
                 <div className="form-group">
                   <label htmlFor="name">Your Name</label>
@@ -235,12 +220,10 @@ function Contact() {
 
               <button type="submit" className="contact-submit">
                 Send Message
-                <Send size={17} />
+                <Send size={17} aria-hidden="true" />
               </button>
-
             </form>
           </motion.div>
-
         </div>
       </div>
     </section>
